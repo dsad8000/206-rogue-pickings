@@ -43,7 +43,6 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	border-bottom: 3px solid #77a466;
 	width: 100%;
 	text-align: center;
 	display: flex;
@@ -52,18 +51,26 @@ header {
 	flex-flow: row wrap;
 }
 
+header h1 {
+	padding-bottom: 10px;
+	border-bottom: 3px solid #77a466;
+	width: 100%;
+}
+
 header h1 span {
 	color: #77a466;
 }
 
 header nav ul {
 	padding-left: 0;
+	width: 100%;
 }
 header nav ul li {
 	text-transform: uppercase;
 	list-style: none;
 	font-weight: 700;
 	font-size: 0.875em;
+	padding-bottom: 10px;
 }
 
 header nav ul li a{
@@ -77,6 +84,11 @@ header nav ul li a{
 	display: flex;
 	justify-content: flex-start;
 	flex-flow: row wrap;
+	width: 100%;
+}
+
+.top-section {
+	border-bottom: 1px solid #eee;
 }
 
 .main-image img {
@@ -93,13 +105,6 @@ header nav ul li a{
 	padding: 0;
 	font-size: 1em;
 	line-height: 25px;
-}
-
-.section-one,
-.section-two,
-.section-three {
-	width: 100%;
-	border-top: 1px solid #eee;
 }
 
 .menu {
@@ -136,4 +141,55 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */ 
+	.bottom-section {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+		flex-basis: auto;
+	} 
+
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 30%;
+		padding: 15px 0 30px 0;
+	}
+
+	.section-two {
+		border: 1px solid #eee;
+		border-width: 0 1px 0 1px;
+		padding: 15px 20px 0 20px;
+	}
+
+	footer {
+		width: 100%;
+	}
+ 
+}
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+	header {
+		justify-content: space-between;
+		padding-top: 50px;
+	}
+
+	header h1 {
+		width: 30%;
+		text-align: left;
+		border-bottom: 0;
+	}
+
+	header nav {
+		width: 40%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
